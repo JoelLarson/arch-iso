@@ -15,6 +15,7 @@ gtkmm3
 f2fs-tools
 linux
 linux-firmware
+linux-firmware-marvell
 memtest86+
 mkinitcpio
 mkinitcpio-archiso
