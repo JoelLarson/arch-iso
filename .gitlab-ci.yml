@@ -1,4 +1,4 @@
-image: "registry.getcryst.al/crystal/misc/docker:latest"
+image: "registry.gitlab.com/crystal-linux/misc/docker:latest"
 
 iso:
   rules:
@@ -20,7 +20,7 @@ iso:
     export BUILD_DATE=$(date +'%Y-%m-%d')
     
     # Clone ISO repo and enter it
-    git clone https://git.getcryst.al/crystal/misc/iso
+    git clone https://gitlab.com/crystal-linux/misc/iso
     cd iso
   
     # Build ISO and rename to match BUILD_DATE
