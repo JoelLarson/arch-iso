@@ -207,6 +207,8 @@ _mkairootfs_ext4+squashfs() {
 
     install -d -m 0755 -- "${isofs_dir}/${install_dir}/${arch}"
     _msg_info "Creating SquashFS image, this may take some time..."
+    _msg_info "But before that, we're running inject.sh"
+    pushd ${startdir} && ./inject.sh ${pacstrap_dir} && popd
     _run_mksquashfs "${pacstrap_dir}.img"
     _msg_info "Done!"
     rm -- "${pacstrap_dir}.img"
@@ -218,6 +220,8 @@ _mkairootfs_squashfs() {
 
     install -d -m 0755 -- "${isofs_dir}/${install_dir}/${arch}"
     _msg_info "Creating SquashFS image, this may take some time..."
+    _msg_info "But before that, we're running inject.sh"
+    pushd ${startdir} && ./inject.sh ${pacstrap_dir} && popd
     _run_mksquashfs "${pacstrap_dir}"
 }
 
@@ -1686,6 +1690,8 @@ _build_bootstrap_image() {
     cd -- "${_bootstrap_parent}"
 
     _msg_info "Creating bootstrap image..."
+    _msg_info "But before that, we're running inject.sh"
+    pushd ${startdir} && ./inject.sh ${pacstrap_dir} && popd
     rm -f -- "${out_dir:?}/${image_name:?}${tarball_ext}"
     bsdtar -cf - "root.${arch}" | "${bootstrap_tarball_compression[@]}" >"${out_dir}/${image_name}${tarball_ext}"
     _msg_info "Done!"
