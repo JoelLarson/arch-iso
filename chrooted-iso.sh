@@ -40,7 +40,6 @@ systemctl enable vmware-vmblock-fuse
 systemctl enable NetworkManager
 systemctl enable reflector
 systemctl enable gdm
-systemctl disable systemd-firstboot
 
 # Mirrorlist
 reflector > /etc/pacman.d/mirrorlist
