@@ -12,6 +12,7 @@ dosfstools
 edk2-shell
 efibootmgr
 gtkmm3
+fastfetch
 f2fs-tools
 linux
 linux-firmware
