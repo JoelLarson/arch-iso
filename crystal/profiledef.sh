@@ -13,3 +13,4 @@ pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
 airootfs_image_tool_options=('-comp' 'zstd' '-b' '1M')
 file_permissions=()
+bootstrap_tarball_compression=('gzip')
